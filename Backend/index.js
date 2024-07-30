@@ -8,6 +8,15 @@ import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 
 const app = express();
+app.use(cors(
+ {
+  origin:[],
+  method:["POST","GET"],
+  credentials: true
+ }
+ ));
+app.use(express.json())
+mongodb+srv://shravan1458119:14581119ansh@ansh.c5gxcok.mongodb.net/?retryWrites=true&w=majority&appName=ANSH');
 
 dotenv.config();
 app.use(cors());
